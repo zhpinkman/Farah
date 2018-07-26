@@ -1,0 +1,5 @@
+<form [formGroup]="loginForm">
+  <label for="username">username</label>
+  <input id="username" formControlName="username" type="text" placeholder="username">
+  <button (click)="onSubmit()">login</button>
+</form>

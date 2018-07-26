@@ -4,16 +4,24 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TaskComponent } from './task/task.component';
+import { Routes, RouterModule } from "@angular/router";
+import { LoginComponent } from './login/login.component';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
 import { NewTaskComponent } from './new-task/new-task.component';
-import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { TasksListsComponent } from './tasks-lists/tasks-lists.component';
 
+// const routes: Routes = [
+//   { path: 'login', component: LoginComponent },
+//   { path: '', component: HomeComponent},
+//   { path: '**', component: LoginComponent}
+// ]
 @NgModule({
   declarations: [
     AppComponent,
     TaskComponent,
+    LoginComponent,
     HomeComponent,
     NewTaskComponent,
     TasksListsComponent
@@ -21,8 +29,9 @@ import { TasksListsComponent } from './tasks-lists/tasks-lists.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
-    HttpClientModule
+    ReactiveFormsModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
