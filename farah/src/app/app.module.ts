@@ -11,9 +11,11 @@ import { HomeComponent } from './home/home.component';
 import { NewTaskComponent } from './new-task/new-task.component';
 import { HttpClientModule } from '@angular/common/http';
 
-const routes: Routes = [
-  { path: 'login', component: LoginComponent }
-]
+// const routes: Routes = [
+//   { path: 'login', component: LoginComponent },
+//   { path: '', component: HomeComponent},
+//   { path: '**', component: LoginComponent}
+// ]
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +28,6 @@ const routes: Routes = [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    RouterModule.forRoot(routes),
     HttpClientModule,
     FormsModule
   ],
