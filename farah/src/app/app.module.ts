@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { TaskComponent } from './task/task.component';
 import { HomeComponent } from './home/home.component';
 import { NewTaskComponent } from './new-task/new-task.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { NewTaskComponent } from './new-task/new-task.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
