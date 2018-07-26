@@ -8,13 +8,15 @@ import { HomeComponent } from './home/home.component';
 import { NewTaskComponent } from './new-task/new-task.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { TasksListsComponent } from './tasks-lists/tasks-lists.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TaskComponent,
     HomeComponent,
-    NewTaskComponent
+    NewTaskComponent,
+    TasksListsComponent
   ],
   imports: [
     BrowserModule,
