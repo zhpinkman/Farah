@@ -7,6 +7,8 @@ import { TaskComponent } from './task/task.component';
 import { Routes, RouterModule } from "@angular/router";
 import { LoginComponent } from './login/login.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { HomeComponent } from './home/home.component';
+import { NewTaskComponent } from './new-task/new-task.component';
 import { HttpClientModule } from '@angular/common/http';
 
 const routes: Routes = [
@@ -16,7 +18,9 @@ const routes: Routes = [
   declarations: [
     AppComponent,
     TaskComponent,
-    LoginComponent
+    LoginComponent,
+    HomeComponent,
+    NewTaskComponent
   ],
   imports: [
     BrowserModule,

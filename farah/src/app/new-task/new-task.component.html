@@ -1,0 +1,10 @@
+<div class="mx-5">
+  <div class="row justify-content-center">
+  <input type="text" name="task" placeholder="Task Name" [(ngModel)]="name" class="form-control col-sm-3">
+  <div class="w-100"></div>
+  <input type="text" name="Description" placeholder="Description" [(ngModel)]="description" class="form-control col-sm-3">
+  <div class="w-100"></div>
+  <button type="button" (click)="createTask()" class="btn btn-success">Create!</button>
+  </div>
+  <p>{{message}}</p>
+</div>

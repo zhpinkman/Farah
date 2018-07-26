@@ -24,7 +24,7 @@ export class LoginComponent implements OnInit {
   onSubmit(){
     this.loginService.login(this.username.value)
       .subscribe(
-        // res => {this.router.navigate(['/home'])},
+        res => {this.router.navigate(['/home'])},
         error => console.error(error)
       );
   }
