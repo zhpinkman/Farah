@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { TaskService } from '../task.service';
+import { LoginService } from '../login.service';
 
 @Component({
   selector: 'app-task',
@@ -8,15 +9,27 @@ import { TaskService } from '../task.service';
 })
 export class TaskComponent implements OnInit {
 
-  task: any;
 
-  constructor(private taskService: TaskService ) { }
+  @Input() task: {
+    taskName : string,
+    taskDescription : string,
+    id : string,
+    done : boolean,
+    UserId : string
+  };
+  
+
+  constructor(private taskService: TaskService , private loginService : LoginService) { }
 
   ngOnInit() {
   }
 
   onclick() {
     this.taskService.deleteById(this.task.id);
+  }
+
+  onDone(){
+    this.taskService.toggleTask(this.task.id,this.task);
   }
 
 }

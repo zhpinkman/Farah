@@ -10,7 +10,7 @@ export class LoginService {
 
   constructor(private http: HttpClient) { }
 
-  userId: String;
+  userId: string;
   login(username) {
     let url = 'http://localhost:8081/users/login';
     return this.http.post<any>(url, username).pipe(map<any, any>(data => { this.userId = data.id; return data; }));

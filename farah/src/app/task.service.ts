@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { TaskComponent } from './task/task.component';
 
 @Injectable({
   providedIn: 'root'
@@ -20,5 +21,9 @@ export class TaskService {
 
   deleteById(id: string) {
 
+  }
+
+  toggleTask(id:string, task : any){
+    return this.http.put<any>("http://localhost:8080/tasks/done"+id,task)
   }
 }
