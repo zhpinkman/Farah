@@ -1,3 +1,1 @@
-farah is a front end part of a sample project
-new commit on dev
-
+A simple app to practice the functionalities of angular framework alongside spring boot. 
